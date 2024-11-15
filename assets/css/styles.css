@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    background-color: rgb(197, 246, 231);
+background-color: rgb(197, 246, 231);
     padding: 25px 0;
 }
 header h1{
@@ -28,6 +28,9 @@ nav ul li a{
     
     color: rgb(33, 212, 9);
     font-size: 20px;
+}
+nav ul li a:hover{
+    border-bottom: 4px;
 }
 
 
@@ -66,7 +69,6 @@ main h2{
 
 .product p {
     margin: 20px 0;
-    /* Margin for spacing */
 } 
 .product .price{
     font-size: larger;
@@ -81,6 +83,88 @@ footer p{
     text-align: center;
     color: white;
     font-size: 16px;
+}
+
+@media (max-width: 1140px) {
+    nav ul {
+        padding: 0 20%;
+    }
+
+    main h2 {
+        margin-left: 30px;
+
+        font-size: 22px;
+       
+    }
+
+    .product-list {
+        grid-template-columns: repeat(3, 1fr);
+
+        margin: 40px;
+
+    }
+}
+
+@media (max-width: 960px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 720px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    main h2 {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+        padding: 100px;
+
+        
+    }
+}
+
+@media (max-width: 540px) {
+    nav ul {
+        align-items: flex-start;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    main h2 {
+        font-size: 18px;
+    }
+    .product-list{
+        margin: 2px;
+        justify-content: center;
+
+    }
+
+    .product {
+        padding: 10px;
+        
+    }
+
+    .product h2 {
+        font-size: 18px;
+    }
+    .product .price {
+        font-size: larger;
+    }
 }
 
 
